@@ -1,9 +1,10 @@
 <?php
 
 
-use App\Http\Controllers\BlogController;
+use App\Models\Rol;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('auth.jwt')->group(function () {
-    Route::apiResource('blogs', BlogController::class);
+
+Route::middleware(['auth.jwt', 'role:'.Rol::ADMIN])->group(function () {
+    Route::get('blogs_web', '\App\Http\Controllers\BlogIndexController@index')->name('blog.index'); //Mostrar blogs
 });
