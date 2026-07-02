@@ -39,7 +39,7 @@ class BlogStoreController extends Controller
         $blogResource = BlogResource::make($blog);
         $data = [
             'message' => 'Se ha creado el blog correctamente',
-            'user' => $blogResource,
+            'blog' => $blogResource,
             'code' => 200,
         ];
         return response()->json($data);
