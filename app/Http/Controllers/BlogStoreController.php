@@ -32,7 +32,7 @@ class BlogStoreController extends Controller
         $blog->description = $blogStoreRequest->description;
         $blog->url = $blogStoreRequest->url;
         $blog->is_active = true;
-        $image = $this->saveStorage($blogStoreRequest->images, 'blogs');
+        $image = $this->saveStorage($blogStoreRequest->image, 'blogs');
         $blog->image = $image;
         $blog->save();
 
