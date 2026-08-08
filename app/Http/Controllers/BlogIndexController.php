@@ -13,4 +13,13 @@ class BlogIndexController extends Controller
             ->paginate(10);
         return BlogResource::collection($blogs);
     }
+
+    public function indexActive()
+    {
+        $blogs = Blog::where('is_active', true)
+            ->orderBy('id', 'DESC')
+            ->paginate(10);
+        return BlogResource::collection($blogs);
+    }
+
 }

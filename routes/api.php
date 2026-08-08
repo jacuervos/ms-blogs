@@ -11,3 +11,7 @@ Route::middleware(['auth.jwt', 'role:'.Rol::ADMIN])->group(function () {
     Route::patch('{blog}/blogs_web', '\App\Http\Controllers\BlogUpdateController@update')->name('blog.update'); //Actualizar blogs
     Route::patch('{blog}/change_state_blogs', '\App\Http\Controllers\BlogChangeStateController@changeStateBlog')->name('blog.changeState'); //Cambiar estado blogs
 });
+
+Route::middleware(['auth.jwt', 'role:'.Rol::USER])->group(function () {
+    Route::get('blogs_app', '\App\Http\Controllers\BlogIndexController@indexActive')->name('blog.indexActive'); //Mostrar blogs activos
+});
