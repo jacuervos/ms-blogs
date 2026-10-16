@@ -5,13 +5,10 @@ namespace Tests\Feature\Blog;
 use App\Http\Middleware\AuthenticateJwt;
 use App\Http\Middleware\RoleMiddleware;
 use App\Models\Blog;
-use Tests\Feature\Support\CreatesBlogMsSchema;
 use Tests\TestCase;
 
 class BlogIndexControllerTest extends TestCase
 {
-    use CreatesBlogMsSchema;
-
     protected function setUp(): void
     {
         parent::setUp();

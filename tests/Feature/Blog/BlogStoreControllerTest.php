@@ -7,13 +7,10 @@ use App\Http\Middleware\RoleMiddleware;
 use App\Models\Blog;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Tests\Feature\Support\CreatesBlogMsSchema;
 use Tests\TestCase;
 
 class BlogStoreControllerTest extends TestCase
 {
-    use CreatesBlogMsSchema;
-
     protected function setUp(): void
     {
         parent::setUp();
