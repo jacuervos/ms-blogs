@@ -1,0 +1,26 @@
+{
+  "backendStories": [
+    {
+      "id": "hu-29-creacion-de-blogs",
+      "sprint": 5,
+      "title": "HU-29 Creación de blogs",
+      "filter": "Tests\\\\Feature\\\\Blog\\\\BlogStoreControllerTest",
+      "enabled": true
+    },
+    {
+      "id": "hu-31-edicion-o-cambios-de-estados-de-blogs",
+      "sprint": 5,
+      "title": "HU-31 Edición o cambios de estados de blogs",
+      "filter": "Tests\\\\Feature\\\\Blog\\\\BlogUpdateAndChangeStateControllerTest",
+      "enabled": true
+    },
+    {
+      "id": "hu-33-visualizacion-de-blogs",
+      "sprint": 5,
+      "title": "HU-33 Visualización de blogs",
+      "filter": "Tests\\\\Feature\\\\Blog\\\\BlogIndexControllerTest",
+      "enabled": true
+    }
+  ]
+}
+
