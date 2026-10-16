@@ -28,7 +28,9 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer install --no-interaction --no-progress --prefer-dist
+        run: |
+          rm -rf vendor
+          composer install --no-interaction --no-progress --prefer-dist
 
       - name: Prepare environment file
         run: cp -n .env.example .env || true
@@ -61,7 +63,9 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer install --no-interaction --no-progress --prefer-dist
+        run: |
+          rm -rf vendor
+          composer install --no-interaction --no-progress --prefer-dist
 
       - name: Prepare environment file
         run: cp -n .env.example .env || true

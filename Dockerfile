@@ -24,7 +24,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Instala dependencias de PHP
-RUN composer install --no-dev --optimize-autoloader
+RUN rm -rf vendor && composer install --no-dev --optimize-autoloader
 
 # Copia configuración personalizada de Apache
 COPY ./docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
